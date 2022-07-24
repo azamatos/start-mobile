@@ -1,18 +1,17 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './screens/HomeScreen'
-import ItemScreen from './screens/ItemScreen';
-
-const Tab = createBottomTabNavigator();
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import BottomTabNavigator from './screens/TabBarNavigator';
+import { StatusBar } from 'react-native';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Item" component={ItemScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <StatusBar translucent backgroundColor="black" />
+      <NavigationContainer >
+        <BottomTabNavigator />
+      </NavigationContainer>
+    </Provider>
   );
 }

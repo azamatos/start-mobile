@@ -1,71 +1,75 @@
 import {
-  Dimensions, Platform, StatusBar, StyleSheet,
+  Dimensions, StyleSheet,
 } from 'react-native'
 
 const screenDimensions = Dimensions.get('screen')
 
 const styles = StyleSheet.create({
-  welcomeLogo: {
-    width: '70%',
-    height: undefined,
-    aspectRatio: 1997 / 1136,
+
+  flexColumn: {
+    flexDirection: "column",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  welcomeCorona: {
-    width: '35%',
-    height: undefined,
-    aspectRatio: 1558 / 1468,
+  flexRow: {
+    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  loginFormWrapper: {
-    width: screenDimensions.width * 0.7,
+  descName: {
+    fontSize: 20,
+    fontWeight: '700',
+    margin: 5,
+    color: 'black'
   },
-  otpInput: {
-    width: 35,
-    height: 40,
-    textAlign: 'center',
-    fontSize: 22,
-    fontWeight: 'bold',
-    borderWidth: 2,
-    padding: 0,
-    textAlignVertical: 'center',
-    borderColor: '#1AC1FB10',
-    backgroundColor: '#1AC1FB10',
-    borderRadius: 4,
-    color: '#344444',
+  descText: {
+    fontSize: 16,
+    margin: 5,
+    textAlign: 'justify',
+    color: 'black'
   },
-  navigator: {
-    borderTopWidth: 0,
-    backgroundColor: 'transparent',
-    elevation: 30,
+  foodPairing: {
+    fontSize: 18,
+    fontWeight: '500',
+    padding: 10,
+    color: 'black'
   },
-  navigatorContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
+  beerItem: {
+    margin: 10,
+    flex: 1,
+    width: '100%',
+    height: 100,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
-  navigatorBottomFill: {
-    position: 'absolute',
-    right: 0,
-    left: 0,
-    bottom: 0,
+  itemName: {
+    color: '#000',
+    width: 200,
+    fontSize: 18
   },
-  floatingButton: {
-    top: -22.5,
+  beerName: {
+    fontSize: 30,
+    fontWeight: "bold",
+    color: 'black',
+    textAlign: 'center'
+  },
+  homeScreen: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 50,
-    height: 50,
+    backgroundColor: '#BFC8AD'
   },
-  newOrderTabContentWrapper: {
-    alignItems: 'center',
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
+  foodView: {
+    flexDirection: 'column',
+    marginTop: 20,
+    width: 200
+  }
+
 })
 
 export const dimension = {
